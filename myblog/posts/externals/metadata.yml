@@ -3,60 +3,73 @@
   subtitle: "Exploring architectural innovations in state-of-the-art MoE models like DeepSeek V3, Qwen, and Llama 4"
   date: "2024-12-15"
   reading-time: 15
+  categories: [LLMs, Architecture, "Deep Learning"]
 
 - path: https://medium.com/@chris.p.hughes10/how-moe-models-actually-learn-a-guide-to-auxiliary-losses-and-expert-balancing-293084e3f600
   title: "How MoE Models Actually Learn: A Guide to Auxiliary Losses and Expert Balancing"
   subtitle: "Understanding how Mixture of Experts models balance learning across experts"
   date: "2024-12-01"
   reading-time: 12
+  categories: [LLMs, Architecture, "Deep Learning"]
 
 - path: https://medium.com/@chris.p.hughes10/inside-openais-gpt-oss-how-production-moe-really-works-cfa5f6a23caa
   title: "Inside OpenAI's gpt-oss: How Production MoE Really Works"
   subtitle: "A deep dive into how OpenAI implements Mixture of Experts architecture"
   date: "2024-11-15"
   reading-time: 15
+  categories: [LLMs, Architecture, "Deep Learning"]
 
 - path: https://medium.com/@chris.p.hughes10/building-scalable-mcp-servers-with-domain-driven-design-fb9454d4c726
   title: "Building Scalable MCP Servers with Domain-Driven Design"
   subtitle: "Applying DDD principles to build robust Model Context Protocol servers"
   date: "2024-07-31"
   reading-time: 10
+  categories: [Agents, "Domain-Driven Design", Architecture]
 
 - path: https://medium.com/@chris.p.hughes10/rethinking-object-detection-as-language-modelling-lessons-from-reimplementing-pix2seq-049104083747
   title: "Rethinking Object Detection as Language Modelling: Lessons from Reimplementing Pix2Seq"
   subtitle: "Insights from building a modern object detection system using sequence generation"
   date: "2024-06-15"
   reading-time: 18
+  categories: ["Computer Vision", "Deep Learning", PyTorch]
 
 - path: https://medium.com/@chris.p.hughes10/a-brief-overview-of-cross-entropy-loss-523aa56b75d5
   title: "A Brief Overview of Cross Entropy Loss"
   subtitle: "A refresher on one of the most commonly used loss functions in machine learning"
   date: "2023-09-02"
   reading-time: 8
+  categories: ["Deep Learning", "Machine Learning"]
 
 - path: https://towardsdatascience.com/yolov7-a-deep-dive-into-the-current-state-of-the-art-for-object-detection-ce3ffedeeaeb
   title: "YOLOv7: A Deep Dive into the Current State-of-the-Art for Object Detection"
   subtitle: "Everything you need to know to use YOLOv7 in custom training scripts"
   date: "2022-11-25"
   reading-time: 53
+  categories: ["Computer Vision", "Deep Learning", PyTorch]
 
 - path: https://medium.com/data-science/effortless-distributed-training-for-pytorch-models-with-azure-machine-learning-and-32797bd2336d?source=friends_link&sk=deded50c33e1ac784005aea43883aa37
   title: "Effortless distributed training for PyTorch models with Azure Machine Learning and PyTorch-accelerated"
   subtitle: "A comprehensive guide to help you get up and running with the AzureML CLI v2"
   date: "2021-12-13"
   reading-time: 12
+  categories: [PyTorch, Azure, "Distributed Training"]
 
 - path: https://medium.com/data-science/introducing-pytorch-accelerated-6ba99530608c?source=friends_link&sk=868c2d2ec5229fdea42877c0bf82b968
   title: "Introducing PyTorch-accelerated"
   subtitle: "A simple but powerful library for training PyTorch models with minimal boilerplate"
   date: "2021-11-29"
   reading-time: 15
+  categories: [PyTorch, "Deep Learning"]
 
 - path: https://medium.com/data-science-at-microsoft/training-efficientdet-on-custom-data-with-pytorch-lightning-using-an-efficientnetv2-backbone-1cdf3bd7921f?source=friends_link&sk=f69c4f3c439cf146143a084518885755
   title: "Training EfficientDet on custom data with PyTorch-Lightning (using an EfficientNetv2 backbone)"
   subtitle: "A clean and clear starting point for anyone wishing to experiment with EfficientDet using PyTorch-Lightning"
   date: "2021-06-27"
   reading-time: 13
+  categories:
+    - PyTorch
+    - Deep Learning
+    - Computer Vision
 
 
 - path: https://medium.com/data-science-at-microsoft/setting-up-machine-learning-projects-for-success-4cba7840d24a?source=friends_link&sk=99f773eb746d8fe9b7f09f97b1e81cf2
@@ -64,6 +77,7 @@
   subtitle: "A tried-and-tested guide to framing data science projects"
   date: "2021-05-11"
   reading-time: 10
+  categories: ["Machine Learning", "Strategy"]
 
 # - path: 
 #   title: ""

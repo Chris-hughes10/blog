@@ -6,7 +6,7 @@ listing:
    - posts/externals/metadata.yml
    sort: "date desc"
    type: default
-   categories: false
+   categories: true
    sort-ui: true
    filter-ui: true
    fields: [date, title, subtitle]
@@ -36,17 +36,17 @@ Principal Machine Learning Engineer/Scientist Manager at Microsoft
 ::: {#social-links}
 [![](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/Chris-hughes10/)
 [![](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chris-hughes1/)
-[![](https://img.shields.io/badge/Medium-000000?logo=medium&logoColor=white)](https://medium.com/@chris.p.hughes10)
+[![](https://img.shields.io/badge/Medium-000000?logo=tiny&logoColor=white)](https://medium.com/@chris.p.hughes10)
 :::
 
 :::::
 
 ## Contents
 
-- [Blog Posts](#blog-posts)
+- [Technical Blog Posts](#technical-blog-posts)
 - [Public Projects](#public-projects)
 
-## Blog Posts {.collapsible}
+## Technical Blog Posts {.collapsible}
 
 ::: {.collapsible-content}
 ::: {#post-listings}
