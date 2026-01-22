@@ -140,6 +140,8 @@ Total: 3 LLM calls (zero variance across runs)
 
 Only **summarization** requires an LLM to reason about content. Everything else is mechanical execution of the plan. This is why V3 uses 85% fewer LLM calls than V2.
 
+![Planner + DAG Pattern Flow](planner_dag_flow.svg)
+
 **Where do the 18 eliminated calls go?**
 
 | V2 Overhead | V3 Equivalent |

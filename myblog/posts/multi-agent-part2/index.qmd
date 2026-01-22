@@ -191,6 +191,9 @@ The key differences from the orchestrator pattern:
 
 All the actual work - stays in the same services; in the reference architecture, these are directly reused from the orchestrator pattern. The goal-aware pattern is a coordination layer, not a rewrite of business logic.
 
+Here is an overview of what this pattern looks like at a high level, before we dive into the individual components:
+
+![Goal-Aware Agent Flow](goal_aware_flow.svg)
 
 ### The Complexity Trade-Off
 
@@ -331,12 +334,14 @@ This eliminates an entire class of coordination bugs. No string parsing, no conv
 If you're familiar with [Microsoft's Agent Framework](https://learn.microsoft.com/en-us/agent-framework/user-guide/workflows/orchestrations/handoff), you might notice similarities with the built-in handoff pattern - agents transfer control to each other without a central orchestrator. But the patterns differ in meaningful ways:
 
 **Microsoft's Handoff Pattern:**
+
 - Handoff paths are **declared upfront** (`.add_handoff(triage, [technical, billing])`)
 - Agents trigger handoffs via **explicit tool calls** (`handoff_to_billing_agent()`)
 - Agents route based on the **current message** ("Is this a billing question?")
 - Full conversation history is passed to the receiving agent
 
 **Our Goal-Aware Pattern:**
+
 - Routing happens **dynamically at runtime** via LLM-based intent analysis
 - Agents return **structured results** (`HandoffResult.handoff(intent=...)`) rather than calling tools
 - Every agent reasons about the **original user goal** ("Is the goal satisfied?")
@@ -386,7 +391,7 @@ A central LLM-based router makes the initial decision, but the assigned agent va
 
 Here's the complete flow when an agent signals "more work needed":
 
-```
+<!-- ```
                     ┌──────────────────────────────────────────────────────┐
                     │                   ROUTING DECISION                   │
                     │                                                      │
@@ -428,7 +433,9 @@ Here's the complete flow when an agent signals "more work needed":
                     │         ACCEPT ──► execute_autonomous()              │
                     │         REJECT ──► re-route (excluding me)           │
                     └──────────────────────────────────────────────────────┘
-```
+``` -->
+
+![Task Routing Flow](routing_flow.svg)
 
 **Key insight: This is directed routing, not competitive claiming.** The LLM makes the routing decision *before* the task enters the queue, setting the `routed_to` field. When agents wake up, they simply check if `routed_to == self.name`—a fast string comparison with no ambiguity about who should claim the task. Only the designated agent will return `True` from `can_handle()`.
 
@@ -584,7 +591,7 @@ return HandoffResult.fan_out(
 
 The pool handles the coordination:
 
-```
+<!-- ```
           User: "Search both channels for pork loin recipes"
                                 │
                       ┌─────────▼─────────┐
@@ -605,7 +612,9 @@ The pool handles the coordination:
                                 │
                                 ▼
                        [Continue chain...]
-```
+``` -->
+
+![Parallel Execution: Fan-Out / Fan-In](parallel_fan_out_detailed.svg)
 
 **The Synthesizer's role**: The Synthesizer is a specialized agent that analyses incoming requests for parallelism opportunities. When it sees "search both X AND Y" or "compare channels A and B", it recognizes these as independent operations and returns a `fan_out` result. For requests without parallelism opportunities (like "search for cooking videos"), it simply hands off to the appropriate agent. This analysis happens once at the start of the workflow—the Synthesizer doesn't participate in later stages.
 

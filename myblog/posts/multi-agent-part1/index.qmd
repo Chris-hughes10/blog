@@ -225,6 +225,8 @@ Returns TranscriptResult object
 Tool formats as string for LLM
 ```
 
+![Single Agent Execution Flow](agent_execution.svg)
+
 ### Why This Matters
 
 **1. Reusability** - Services can be called from the CLI directly, from tests, or from scripts, without going through the LLM:
@@ -627,7 +629,7 @@ Notice we use a class here instead of a simple factory function. This is intenti
 The orchestrator's "tools" are delegation functions. When the LLM decides to search, it calls `ask_search_agent`, which runs the SearchAgent and returns its result. The orchestrator sees the result and decides what to do next.
 
 This is the hub-and-spoke pattern:
-
+<!-- 
 ```
                    ┌─────────────┐
                    │ Orchestrator│
@@ -641,7 +643,9 @@ This is the hub-and-spoke pattern:
   │ Search  │ │Transcript│ │Summarize│ │  Writer │
   │  Agent  │ │  Agent   │ │  Agent  │ │  Agent  │
   └─────────┘ └──────────┘ └─────────┘ └─────────┘
-```
+``` -->
+
+![Orchestrator Pattern Flow](orchestrator_flow.svg)
 
 Every interaction flows through the centre. The orchestrator accumulates context from each step, maintaining the full conversation history.
 
