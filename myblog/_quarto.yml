@@ -13,6 +13,7 @@ website:
     title: "Chris Hughes"
 format:
   html:
+    include-in-header: google-verification.html
     theme:
       light: [default, theme.scss]
       dark: [default, theme-dark.scss]
