@@ -5,6 +5,7 @@ date: "2026-01-24"
 categories: [Agents, Architecture]
 reading-time: 10
 image: headline.png
+description: "AI is reshaping how we write software, but architectural thinking matters more now — not less. Here's why, and what needs to change."
 ---
 
 ![](headline.png)

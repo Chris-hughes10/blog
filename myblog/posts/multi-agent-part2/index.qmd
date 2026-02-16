@@ -4,6 +4,7 @@ subtitle: "Exploring distributed coordination where agents reason about goals an
 date: "2026-01-18"
 categories: [Agents, Architecture, "Domain-Driven Design"]
 reading-time: 25
+description: "What happens when you remove the central orchestrator and let every agent reason about the user's goal."
 ---
 
 In [Part 1](../multi-agent-part1/), we discussed a YouTube research assistant with an orchestrator coordinating four specialized agents. The orchestrator received user requests, delegated to specialists, collected results, and synthesized responses. It worked - and for many use cases, it's the right pattern.

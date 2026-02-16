@@ -3,7 +3,11 @@ project:
 
 website:
   title: "Chris Hughes"
+  site-url: "https://chris-hughes10.github.io"
+  description: "Applied AI, software architecture, and the discipline of building things that work"
   favicon: profile.jpg
+  open-graph: true
+  twitter-card: true
   navbar:
     menu: false
     title: "Chris Hughes"
@@ -17,6 +21,7 @@ format:
 resources:
   - CNAME
   - collapsible.js
+  - robots.txt
 
 
 

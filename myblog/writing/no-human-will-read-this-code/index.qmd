@@ -5,6 +5,7 @@ date: "2026-02-16"
 categories: [AI, Software Engineering]
 reading-time: 10
 image: "ChatGPT Image Feb 15, 2026, 09_22_37 AM.png"
+description: "How a hackathon changed my mind about AI coding tools — and the overcorrection that taught me where discipline still matters."
 ---
 
 Six months ago, I believed I was more productive without AI coding agents.
