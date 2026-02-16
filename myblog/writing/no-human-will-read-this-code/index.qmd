@@ -1,0 +1,104 @@
+---
+title: "No Human Will Read This Code"
+subtitle: "The moment, the overcorrection, and the discipline I found on the other side"
+date: "2026-02-16"
+categories: [AI, Software Engineering]
+reading-time: 10
+image: "ChatGPT Image Feb 15, 2026, 09_22_37 AM.png"
+---
+
+Six months ago, I believed I was more productive without AI coding agents.
+
+I'd been watching the hype build. I was hearing that AI would replace junior engineers --- I flat out disagreed. I could see potential in the tools, but it seemed a long way off. I used AI to ask questions about codebases --- to help my understanding --- but when it came to writing code, I was genuinely convinced I was faster without agents. I coded for fun. I saw it as a craft and an art form. I was fast, I had a workflow that worked for me, and I thought the tools just weren't good enough yet.
+
+I'd spent years taking pride in my code. Every module crafted to be clean and readable. Wrapping ugly libraries --- looking at you, argparse --- with lightweight wrappers just so they looked right. That craft was part of my identity as an engineer.
+
+Then the hackathon happened.
+
+![](ChatGPT Image Feb 15, 2026, 09_22_37 AM.png)
+
+## The Moment Everything Changed
+
+Late last year, my team ran a hackathon. We set ourselves a challenge: nobody writes a line of code --- agents do everything. We're all experienced engineers. We wanted to see what would happen if we genuinely got out of the way.
+
+I went in sceptical.
+
+Within hours, that scepticism evaporated. Agents built a whole working frontend in less than an hour. Then we wired it up to the backend, added data storage, built out the pieces we needed --- and it wasn't even the state of the art model. I didn't have enough requests for that.
+
+When it came time to put it all together, we asked the agent to integrate everything and run the tests. A teammate joked: "if it can do this, our careers are over." The terminal output whirred for 10 minutes. Then it worked.
+
+When it worked, I didn't know how to feel. It was a mix of fear and excitement. But one of my team was different. He had no fear at all. He said something like: *"I hate writing code. It's just how I've had to talk to the computer. I can't wait to just tell it what I want in English."*
+
+He's not a weak engineer --- he's one of the strongest I've worked with. I struggle to think of anything he couldn't specify in code. He just never tied his identity to the act of writing code. He tied it to what the code let him build.
+
+It was as if I could see into the future. It wasn't perfect. But it was good enough --- and I could see, clearly, that it was only going to keep getting better.
+
+I was hooked. On the train home, I was talking to the agent on my tiny laptop screen, still building. Something had fundamentally shifted.
+
+## A Sudden Shift
+
+Outwardly, my change in mindset may have seemed sudden; that's because it was.
+
+But it wasn't random. All of the ideas I'd been building about focusing on outcomes over process --- all the things I'd been coaching, sometimes debating, with my team and colleagues --- suddenly seemed amplified. The hackathon didn't create new beliefs. It crystallised ones I already held.
+
+I thought about how I already work. I manage a team of engineers. I've never reviewed every line of code they write. I make sure they're clear on the outcomes and the why. I review critical pieces --- sometimes through discussion, not a line-by-line code review. I set direction, trust the team, verify the outcome.
+
+Working with agents felt like the same relationship.
+
+When I first started writing code, older engineers talked about checking compiler output. I've never done this --- not once in my career. I trust the compiler. That transition happened before I arrived. I never questioned it.
+
+I could see this was the same kind of shift. No human will read this code. I was determined I wouldn't be the person insisting otherwise.
+
+## The Cautionary Tale
+
+And then I went too far.
+
+The excitement was real, but I didn't stop to draw boundaries. I saw parts of the hackathon output worth keeping, so I set aside time to pull them into a better structure. After several hours directing an agent, I had a pull request with 132 files changed. Every time I was about to request a review, something else broke.
+
+The team weren't thrilled about reviewing it --- too much had changed to reason about. We had tests, but the agent had refactored them so many times we couldn't depend on them. It had a habit of changing tests so they passed rather than fixing the actual issues.
+
+The code worked. But nobody could reason about it --- including the AI. We ended up abandoning it.
+
+Fast iteration without isolation isn't velocity. It's turbulence.
+
+I had the right vision. I hadn't found the right method yet.
+
+## Finding What Works
+
+After the hackathon, I spent weeks diligently exploring what actually works. Not going back to the old way --- that door was closed. Not staying with the chaos of the overcorrection. Finding the discipline that makes the speed sustainable.
+
+What I found is what I've been writing about for the last few weeks:
+
+**Architecture moves upstream.** When I bring clear boundaries before agents touch code --- bounded contexts, dependency flows, service interfaces --- the results are dramatically better. The AI understands what I'm building. I can reason about what it produces. Structure isn't overhead. It's the interface between me and my tools.
+
+**Vocabulary becomes the shared language.** When I describe what I want in precise architectural terms, the agent proposes implementations that fit. When I'm vague, it's vague. The system design knowledge I've built over a decade now pays off twice: once with my team, once with AI.
+
+**Design still matters --- but it's a spectrum.** In domains I know well, I design before an agent writes a line. In genuinely novel territory, I build to learn first, then design. The discipline isn't "always design first." It's recognising when you've learned enough to start designing --- and having the restraint to stop and do it.
+
+**Verification replaces line-by-line review.** I don't read every line anymore. I verify outcomes. Tests. Defined interfaces. Clear acceptance criteria. And when something is genuinely mission-critical, clear boundaries mean you know exactly where to look --- or you can point dedicated agents at the parts that matter most.
+
+Over Christmas, I had the confirmation that the tools had caught up to the vision. Using the latest model from my phone --- while my family watched the Big Fat Quiz of the Year --- I upgraded real Python packaging infrastructure. Work I had put off for years on my open source projects, done in under 30 minutes.
+
+Not a toy project. Not a hackathon experiment. Real work, on a phone, between rounds of festive television. I didn't read every line it wrote. I verified the outcome.
+
+Now they are more than good enough.
+
+## The Craft Moved Upstream
+
+A few weeks ago, I spoke about a pattern I've noticed in how engineers respond to this shift. Some tie their identity to the process --- clean code, engineering fundamentals, review discipline. Others tie their identity to the outcome --- did we solve the problem, did we ship, did it work.
+
+I wrote that because I'd lived it.
+
+I used to take real pride in every module I crafted. Letting go of that was hard. But I got into engineering to build things. The craft was always in service of that --- not the other way around.
+
+And those views I disagreed with about AI replacing juniors? My thinking has evolved. There's already a new generation growing up with these tools who aren't anxious about checking every line of output. They see agents as a way to drive toward what they want to build --- the same way I see the compiler. They'll trust this layer because they've never known anything different. AI doesn't replace junior engineers. It changes what "junior" means.
+
+The cost of writing code has dropped dramatically. It will keep dropping. The cost of directing what gets built --- knowing where the boundaries belong, knowing what to verify, knowing which problem to solve --- hasn't dropped at all. If anything, it's gone up.
+
+That's where the craft lives now. Not in the code. In the architecture, the judgement, the decisions that no agent will make for you.
+
+The tools have changed. The question hasn't: what outcome are you driving toward?
+
+---
+
+*All opinions are my own.*
